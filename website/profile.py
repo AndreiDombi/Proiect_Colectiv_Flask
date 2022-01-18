@@ -6,8 +6,8 @@ from . import db
 profile_blueprint = Blueprint('profile', __name__)
 
 
-@profile_blueprint.route('/', methods=['POST','GET'])
+@profile_blueprint.route('/profile', methods=['POST','GET'])
 @login_required
-def profile():
-    user = current_user
-    return render_template('profile.html', user=current_user)
+def profile1():
+
+    return render_template('profile.html',user = current_user)
