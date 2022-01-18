@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block title %}Peg request{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col align-self-start">
+      List of PEGs
+      <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Peg Id</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+        <!--- for loop here--->
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <!---end for loop--->
+
+        </tbody>
+      </table>
+
+    </div>
+    <div class="col align-self-end">
+      Request new PEG
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder={{ user.email }}
+                readonly/>
+
+        </div>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                name="firstName"
+                placeholder={{ user.first_name }}
+                readonly/>
+        </div>
+      <div class="form-group">
+        <label for="Career_level">Career level</label>
+        <input
+                type="text"
+                class="form-control"
+                id="Career_level"
+                name="Career_level"
+                placeholder={{ user.career_level }}
+                readonly/>
+        </div>
+      <div class="form-group">
+        <label for="Personal_number">Personal number</label>
+        <input
+                type="text"
+                class="form-control"
+                id="Personal_number"
+                name="Personal_number"
+                placeholder={{ user.personal_number }}
+                readonly/>
+        </div>
+      <div class="form-group">
+        <label for="Fiscal_year">Fiscal year</label>
+        <input
+                type="text"
+                class="form-control"
+                id="Fiscal_year"
+                name="Fiscal_year"
+                placeholder={{ user.fiscal_year }}
+                readonly/>
+        </div>
+      <div class="form-group">
+        <label for="SU">SU</label>
+        <input
+                type="text"
+                class="form-control"
+                id="SU"
+                name="SU"
+                placeholder={{ user.su }}
+                readonly/>
+        </div>
+      <br><br><br>
+      <div class="form-group">
+        <label for="Project_info">Project info</label>
+        <input
+                type="text"
+                class="form-control"
+                id="Project_info"
+                name="Project_info"
+                placeholder="Project info"/>
+        </div>
+      <div class="form-group">
+        <label for="Manager">Responsible manager</label>
+        <input
+                type="text"
+                class="form-control"
+                id="Manager"
+                name="Manager"
+                placeholder="Manager"/>
+        </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -10,7 +10,6 @@ class Note(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 
-
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(150), unique=True)
@@ -18,3 +17,7 @@ class User(db.Model, UserMixin):
     first_name = db.Column(db.String(150))
     notes = db.relationship('Note')
     role = db.Column(db.String(100))
+    career_level = db.Column(db.String(100))
+    personal_number = db.Column(db.Integer)
+    fiscal_year = db.Column(db.Integer)
+    su = db.Column(db.String)
