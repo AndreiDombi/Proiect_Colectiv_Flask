@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block title %}Feedback request{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col align-self-start">
+      List of PEGs
+      <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Peg Id</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+        <!--- for loop here--->
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <!---end for loop--->
+
+        </tbody>
+      </table>
+
+
+    </div>
+    <div class="col align-self-end">
+      Request new Feedback
+
+      <div class="form-group">
+        <label for="User">User:</label>
+        <input
+                type="text"
+                class="form-control"
+                id="user"
+                name="user"
+                placeholder="Enter user name"/>
+      </div>
+      <div class="form-group">
+        <label for="Project">Project:</label>
+        <input
+                type="text"
+                class="form-control"
+                id="project"
+                name="project"
+                placeholder="Enter project name"/>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Anonymous
+        </label>
+      </div>
+      <br><br><br>
+        <h3>Categories</h3>
+        <label for="Technical_skills">Technical skills:</label>
+        <input
+                type="number"
+                class="form-control"
+                id="Technical_skills"
+                name="Technical_skills"
+                placeholder="Select value between 0-10"
+                min="0"
+                max="10"/>
+        <label for="Communication_skills">Communication skills:</label>
+        <input
+                type="number"
+                class="form-control"
+                id="Communication_skills"
+                name="Communication_skills"
+                placeholder="Select value between 0-10"
+                min="0"
+                max="10"/>
+        <label for="Team_work_skills">Team work skills:</label>
+        <input
+                type="number"
+                class="form-control"
+                id="Team_work_skills"
+                name="Team_work_skills"
+                placeholder="Select value between 0-10"
+                min="0"
+                max="10"/>
+        <label for="Problem_solving_skills">Problem solving skills:</label>
+        <input
+                type="number"
+                class="form-control"
+                id="Problem_solving_skills"
+                name="Problem_solving_skills"
+                placeholder="Select value between 0-10"
+                min="0"
+                max="10"/>
+        <label for="Time_management">Time management:</label>
+        <input
+                type="number"
+                class="form-control"
+                id="Time_management"
+                name="Time_management"
+                placeholder="Select value between 0-10"
+                min="0"
+                max="10"/>
+
+</div>
+</div>
+</div>
+
+{% endblock %}
+

@@ -16,6 +16,14 @@
     <orderEntry type="library" name="jquery-3.2.1.slim" level="application" />
     <orderEntry type="library" name="popper.js" level="application" />
     <orderEntry type="library" name="bootstrap-table" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="bootstrap.bundle" level="application" />
+    <orderEntry type="library" name="jquery-1.11.1" level="application" />
+    <orderEntry type="library" name="star-rating" level="application" />
+    <orderEntry type="library" name="5ea815c1d0" level="application" />
+    <orderEntry type="library" name="button.prod" level="application" />
+    <orderEntry type="library" name="jqueryui" level="application" />
+    <orderEntry type="library" name="twitter-bootstrap" level="application" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
