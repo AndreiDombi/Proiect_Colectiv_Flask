@@ -10,19 +10,23 @@
       <table class="table">
         <thead>
             <tr>
-                <th scope="col">Peg Id</th>
+                <th scope="col">Feedback Id</th>
                 <th scope="col">Status</th>
+                <th scope="col">Sender</th>
+                <th scope="col">Project</th>
             </tr>
         </thead>
         <tbody>
-        <!--- for loop here--->
+        {% set number = 0 %}
+        {% for feedback in user.feedback %}
+        {% set number =  number + 1 %}
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>{{ feedback.id }}</td>
+            <td>{{ feedback.status }}</td>
+            <td>{{ feedback.request_user_name }}</td>
+            <td>{{ feedback.project_name }}</td>
         </tr>
-        <!---end for loop--->
+        {% endfor %}
 
         </tbody>
       </table>
@@ -31,7 +35,7 @@
     </div>
     <div class="col align-self-end">
       Request new Feedback
-
+      <form method="POST">
       <div class="form-group">
         <label for="User">User:</label>
         <input
@@ -51,7 +55,7 @@
                 placeholder="Enter project name"/>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <input name= "anon" class="form-check-input" type="checkbox" value="1" id="defaultCheck1">
         <label class="form-check-label" for="defaultCheck1">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Anonymous
         </label>
@@ -103,6 +107,10 @@
                 placeholder="Select value between 0-10"
                 min="0"
                 max="10"/>
+        <div align="center">
+            <button type="submit" class="btn btn-primary">Sent PEG request</button>
+        </div>
+      </form>
 
 </div>
 </div>

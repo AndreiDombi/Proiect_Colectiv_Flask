@@ -12,17 +12,22 @@
             <tr>
                 <th scope="col">Peg Id</th>
                 <th scope="col">Status</th>
+                <th scope="col">Type</th>
+                <th scope="col">Project info</th>
+
             </tr>
         </thead>
         <tbody>
-        <!--- for loop here--->
+        {% set number = 0 %}
+        {% for peg in user.peg %}
+        {% set number =  number + 1 %}
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>{{ peg.id }}</td>
+            <td>{{ peg.status }}</td>
+            <td>{{ peg.type }}</td>
+            <td>{{ peg.project_info }}</td>
         </tr>
-        <!---end for loop--->
+        {% endfor %}
 
         </tbody>
       </table>
@@ -93,6 +98,7 @@
                 readonly/>
         </div>
       <br><br><br>
+      <form method="POST">
       <div class="form-group">
         <label for="Project_info">Project info</label>
         <input
@@ -101,7 +107,7 @@
                 id="Project_info"
                 name="Project_info"
                 placeholder="Project info"/>
-        </div>
+      </div>
       <div class="form-group">
         <label for="Manager">Responsible manager</label>
         <input
@@ -111,6 +117,10 @@
                 name="Manager"
                 placeholder="Manager"/>
         </div>
+        <div align="center">
+            <button type="submit" class="btn btn-primary">Sent PEG request</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
